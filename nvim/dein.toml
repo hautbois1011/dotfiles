@@ -1,0 +1,78 @@
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = '''
+  nnoremap [fugitive] <Nop>
+  nmap <space>g [fugitive]
+  nnoremap [fugitive]b :<C-u>Gblame<CR>
+  nnoremap [fugitive]d :<C-u>Gdiff<CR>
+  nnoremap [fugitive]s :<C-u>Gstatus<CR>
+  nnoremap [fugitive]r :<C-u>Gread<CR>
+  nnoremap [fugitive]a :<C-u>Gwrite<CR>
+  nnoremap [fugitive]x :<C-u>Gremove<CR>
+  nnoremap [fugitive]c :<C-u>Gcommit-v<CR>
+  nnoremap [fugitive]m :<C-u>Gmerge<CR>
+'''
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+  set laststatus=2
+  let g:airline_powerline_fonts=1
+  let g:airline#extensions#tabline#enabled=1
+  let g:airline#extensions#tabline#buffer_idx_mode=1
+  let g:airline#extensions#whitespace#mixed_indent_algo=1
+  let g:airline_theme='tomorrow'
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'kana/vim-submode'
+hook_add = '''
+  call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
+  call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
+  call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
+  call submode#enter_with('bufmove', 'n', '', 's-', '<C-w>-')
+  call submode#map('bufmove', 'n', '', '>', '<C-w>>')
+  call submode#map('bufmove', 'n', '', '<', '<C-w><')
+  call submode#map('bufmove', 'n', '', '+', '<C-w>+')
+  call submode#map('bufmove', 'n', '', '-', '<C-w>-')
+'''
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = '''
+  nnoremap [denite] <Nop>
+  nmap <space>d [denite]
+  nnoremap [denite]f :<C-u>Denite file_rec<CR>
+  nnoremap [denite]b :<C-u>Denite buffer<CR>
+  nnoremap [denite]r :<C-u>Denite file_mru<CR>
+  nnoremap [denite]y :<C-u>Denite neoyank<CR>
+  nnoremap [denite]o :<C-u>Denite outline<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/unite-outline'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+
